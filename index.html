@@ -1,45 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beta Granite Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beta Granite Corp | Premium Granite & Quartz Countertops</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    background:#111;
+    color:white;
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:black;
+}
+
+header h2 {
+    color:#c8a45c;
+    font-weight:700;
+    margin:0;
+}
+
+nav a {
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover {
+    color:#c8a45c;
+}
+
+.hero {
+    background: url('images/tajmahal.jpg') center/cover no-repeat;
+    height:550px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1 {
+    font-size:50px;
+    margin:0;
+    color:white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.hero p {
+    font-size:22px;
+    margin:15px 0;
+    text-shadow: 1px 1px 6px black;
+}
+
+button {
+    background:#c8a45c;
+    color:black;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:6px;
+    margin-top:15px;
+}
+
+button:hover {
+    background:#b39449;
+}
+
+.section {
+    padding:70px 50px;
+    text-align:center;
+}
+
+h2 {
+    margin-bottom:50px;
+    font-size:36px;
+    color:#c8a45c;
+}
+
+.services {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card {
+    background:#222;
+    padding:30px;
+    width:280px;
+    border-radius:12px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.inventory {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.inventory-card {
+    background:#222;
+    border-radius:12px;
+    overflow:hidden;
+    transition: transform 0.3s;
+}
+
+.inventory-card:hover {
+    transform: translateY(-8px);
+}
+
+.inventory-card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.inventory-card h3 {
+    margin:10px 0 5px 0;
+}
+
+.inventory-card p {
+    margin:0 0 10px 0;
+}
+
+.quote {
+    background:#1b1b1b;
+    padding:60px 50px;
+    border-radius:12px;
+    margin:50px auto;
+    max-width:600px;
+}
+
+input, select {
+    padding:12px;
+    margin:10px 0;
+    width:100%;
+    border-radius:6px;
+    border:none;
+}
+
+footer {
+    background:black;
+    padding:40px 20px;
+    text-align:center;
+    margin-top:50px;
+}
+
+footer p {
+    margin:5px 0;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Beta Granite</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <h2>Premium Granite Solutions</h2>
-            <p>Discover our finest granite slabs and products</p>
-            <img src="images/hero.jpg" alt="Hero Granite">
-        </section>
-        <section id="products">
-            <h2>Our Products</h2>
-            <p>Quality granite for every project</p>
-        </section>
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <img src="images/slab1.jpg" alt="Granite Slab 1">
-            <img src="images/slab2.jpg" alt="Granite Slab 2">
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: info@betagranite.com</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Beta Granite. All rights reserved.</p>
-    </footer>
+
+<header>
+<h2>Beta Granite Corp</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#inventory">Live Inventory</a>
+<a href="#quote">Quote</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Premium Granite & Quartz Countertops</h1>
+<p>Custom fabrication & installation for homes & commercial projects</p>
+<button>Get Free Quote</button>
+</section>
+
+<section id="services" class="section">
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">
+<img src="images/tajmahal.jpg" alt="Granite Countertops">
+<h3>Granite Countertops</h3>
+<p>Natural stone surfaces for kitchens and bathrooms with custom fabrication.</p>
+</div>
+<div class="card">
+<img src="images/tajmahal.jpg" alt="Quartz Countertops">
+<h3>Quartz Countertops</h3>
+<p>Durable, modern engineered quartz surfaces for any space.</p>
+</div>
+<div class="card">
+<img src="images/tajmahal.jpg" alt="Commercial Installations">
+<h3>Commercial Projects</h3>
+<p>Professional stone installation for offices, restaurants, and businesses.</p>
+</div>
+</div>
+</section>
+
+<section id="inventory" class="section">
+<h2>Live Stone Inventory</h2>
+<div class="inventory">
+<div class="inventory-card">
+<img src="images/tajmahal.jpg" alt="Taj Mahal Quartzite">
+<h3>Taj Mahal</h3>
+<p>Quartzite • Polished • 126x64</p>
+<button>Request Slab</button>
+</div>
+<div class="inventory-card">
+<img src="images/tajmahal.jpg" alt="Calacatta Gold Quartz">
+<h3>Calacatta Gold</h3>
+<p>Quartz • Polished • 126x64</p>
+<button>Request Slab</button>
+</div>
+<div class="inventory-card">
+<img src="images/tajmahal.jpg" alt="Black Galaxy Granite">
+<h3>Black Galaxy</h3>
+<p>Granite • Leathered • 120x70</p>
+<button>Request Slab</button>
+</div>
+</div>
+</section>
+
+<section id="quote" class="section quote">
+<h2>Instant Quote Calculator</h2>
+<select id="material">
+<option value="65">Granite</option>
+<option value="75">Quartz</option>
+<option value="90">Quartzite</option>
+</select>
+<input type="number" id="sqft" placeholder="Square Feet">
+<button onclick="calculate()">Calculate</button>
+<h3 id="result"></h3>
+</section>
+
+<section id="contact" class="section">
+<h2>Get a Free Quote</h2>
+<input placeholder="Name"><br>
+<input placeholder="Phone"><br>
+<input placeholder="Email"><br>
+<button>Submit Request</button>
+</section>
+
+<footer>
+<p>© 2026 Beta Granite Corp</p>
+<p>Serving Georgia</p>
+</footer>
+
+<script>
+function calculate(){
+let price = document.getElementById("material").value;
+let sqft = document.getElementById("sqft").value;
+let total = price * sqft;
+document.getElementById("result").innerHTML = "Estimated Price: $" + total;
+}
+</script>
+
 </body>
 </html>
